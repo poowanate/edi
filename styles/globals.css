@@ -1,0 +1,238 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (min-width: 640px) {
+  table {
+    display: inline-table !important;
+  }
+
+  thead tr:not(:first-child) {
+    display: none;
+  }
+}
+.datePicker {
+  width: 100%;
+}
+
+td:not(:last-child) {
+  border-bottom: 0;
+}
+.disable{
+  background-color:  #ececec;
+}
+th:not(:last-child) {
+  border-bottom: 2px solid rgba(0, 0, 0, .1);
+}
+
+
+html {
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial,
+    sans-serif;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* can be configured in tailwind.config.js */
+.group:hover .group-hover\:block {
+  display: block;
+}
+
+.focus\:cursor-text:focus {
+  cursor: text;
+}
+
+.focus\:w-64:focus {
+  width: 16rem;
+}
+
+/* zendesk styles */
+.h-16 {
+  height: 50px;
+}
+.bg-teal-900 {
+  background: #03363d;
+}
+.bg-gray-100 {
+  background: #f8f9f9;
+}
+.hover\:border-green-500:hover {
+  border-color: #78a300;
+}
+
+.sidenav {
+  height: 100%;
+  width: 70px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.pffix{
+  padding: 2px 5px; font-size: 0.7rem;
+}
+
+.fullplesase{
+  height: 100vh
+}
+
+
+
+.page-content {
+  padding: 10px 20px;
+  box-sizing: border-box;
+  width: 100%;
+  flex: 1;
+}
+
+.list-reset ul {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.list-reset ul li {
+  display: flex;
+  align-items: center;
+}
+.list-reset ul li a {
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  white-space: nowrap;
+}
+th{
+  position:relative;
+}
+.list-reset ul li a.active,
+.list-reset ul li a:hover {
+  background: #e8ecef;
+  border-color: red;
+}
+.list-reset ul li span {
+  margin-left: 16px;
+  font-size: 16px;
+  font-weight: 100;
+}
+.list-reset ul li i {
+  font-size: 18px;
+  color: #111;
+  font-weight: normal;
+}
+.input {
+  transition: border 0.2s ease-in-out;
+  min-width: 280px
+}
+
+.input:focus+.label,
+.input:active+.label,
+.input.filled+.label {
+  font-size: .75rem;
+  transition: all 0.2s ease-out;
+  top: -0.1rem;
+  color: #667eea;
+}
+
+.label {
+  transition: all 0.2s ease-out;
+  top: 0.4rem;
+  left: 0;
+}
+
+.fonttop{
+font-size: larger;
+}
+
+.ground{
+  background:  #f8f8f8;
+}
+
+
+.bgbluebytop{
+background: #3C3F99;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.row{
+  margin-top:40px;
+  padding: 0 10px;
+}
+
+.clickable{
+  cursor: pointer;   
+}
+
+.panel-heading span {
+margin-top: -20px;
+font-size: 15px;
+}
+
+.scrollit{
+  overflow:scroll;
+  height:100px;
+}
+
+.textcenbytop{
+  text-align: -webkit-center;
+}
+
+
+.mainbyming{
+  width: calc(100% - 16rem) !important;
+}
+
+
