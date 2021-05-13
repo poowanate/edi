@@ -7,11 +7,22 @@ import { useRouter } from 'next/router'
 const Layout =(props) => {
 
   const [nameuser,setnameuser] =  useState('??????????');
-
+  const [role,setrole] =  useState(0);
   const Router = useRouter();
   const fetchData = async () => {
     setnameuser(jscookie.get('name'))
-             
+console.log(jscookie.get('role'))
+    if(jscookie.get('role') =='ADMIN'){
+      console.log('ggpw')
+      setrole(3)
+    }
+    else if(jscookie.get('role')=='OTHER'){
+      setrole(2)
+    }
+    else if(jscookie.get('role')=='OTHERasn'){
+      setrole(1)
+    }
+   
     if(jscookie.get('name')==null){
      Router.push('/login')
     }
@@ -88,21 +99,23 @@ useEffect(() => {
   </div>
 </nav>
 <div className ="flex bg-gray-100">
-  {(!isClosed) && ( <aside className='bg-white w-64 min-h-screen flex flex-col'>
+  {(!isClosed) && ( 
+  <aside className='bg-white w-64 min-h-screen flex flex-col'>
     {/* <div className='bg-white border-r border-b px-4 h-10 flex item-center'> 
     <span className='text-blue py-2'>
       Application
     </span>
     </div> */}
     <div className="bg-white flex-grow shadow-lg w-64 my-2 list-reset">
-  <ul className="">
+    {(role == 3) && (
+      <ul className="">
     <li >
     <div className=" absolute content-end float-right  text-4xl bg-red-500 ">1</div>
     <Link href="/components/asn/asndetail">
          
        
       <a  className="ml-4 block p-4 text-grey-darker font-bold border-purple hover:bg-grey-lighter border-r-4"><div className='mr-2'><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokelinecap="round" strokelinejoin="round" strokewidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg></div>
-      Table
+      ข้อมูลผู้ขาย
  
       </a>
       </Link>
@@ -123,6 +136,41 @@ useEffect(() => {
     </li>
    
   </ul>
+
+    )}
+
+{(role == 2) && (
+      <ul className="">
+    <li >
+    <div className=" absolute content-end float-right  text-4xl bg-red-500 ">1</div>
+    <Link href="/components/po_in/poindetail">
+    
+    <a  className="ml-4 block p-4 text-grey-darker font-bold border-grey-lighter hover:border-purple-light hover:bg-grey-lighter border-r-4"><div className='mr-2'><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokelinecap="round" strokelinejoin="round" strokewidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg></div>รายการสั่งซื้อสินค้า</a>
+    </Link>
+    </li>
+  
+  </ul>
+
+    )}
+ 
+ {(role == 1) && (
+      <ul className="">
+    <li >
+    <div className=" absolute content-end float-right  text-4xl bg-red-500 ">1</div>
+    <Link href="/components/asn/asndetail">
+         
+       
+         <a  className="ml-4 block p-4 text-grey-darker font-bold border-purple hover:bg-grey-lighter border-r-4"><div className='mr-2'><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokelinecap="round" strokelinejoin="round" strokewidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg></div>
+         ข้อมูลผู้ขาย
+    
+         </a>
+         </Link>
+    </li>
+  
+  </ul>
+
+    )}
+    
 </div>
    
   </aside>
