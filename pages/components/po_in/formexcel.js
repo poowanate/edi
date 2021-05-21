@@ -701,6 +701,109 @@ const test =()=>{
     <h2 className='fonttop mb-5'>เซล 2</h2>
     </div>
     <div className="grid lg:grid-cols-4 gap-6  mt-3 pt-3">
+    <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
+        <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+          <p>
+            <label htmlFor="name" className="bg-white text-gray-600 px-1">DATA_LINE_TYPE</label>
+          </p>
+        </div>
+        <p>
+        <input disabled maxLength={2} onChange={e => setDATA_LINE_TYPEfirst(e.target.value)} value={DATA_LINE_TYPEfirst} id="name" autoComplete="false" tabIndex="0" type="text" className="disable py-1 px-1 text-black outline-none block h-full w-full"/>
+           </p>
+      </div>
+      <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
+        <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+          <p>
+            <label htmlFor="name" className="bg-white text-gray-600 px-1">วันที่ออกใบสั่งซื้อ</label>
+          </p>
+        </div>  
+        <p>
+        <DatePicker onChange={date => setPO_DATEsecond(date)}  selected={PO_DATEsecond} wrapperClassName="datePicker w-full" className='py-1 px-1 text-gray-900 outline-none block h-full w-full' dateFormat="dd-MM-yyyy"   />
+   
+            </p>
+      </div>
+      <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
+        <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+          <p>
+            <label htmlFor="name" className="bg-white text-gray-600 px-1">สถานที่ส่งมอบ</label>
+          </p>
+        </div>
+        <p>
+          <input onChange={e => setSHIP_TO_CODEsecond(e.target.value)} value={SHIP_TO_CODEsecond} id="SHIP_TO_CODEsecond" autoComplete="false" tabIndex="0" type="text" className="py-1 px-1 text-gray-900 outline-none block h-full w-full"/>
+        </p>
+      </div>
+      <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
+        <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+          <p>
+            <label htmlFor="name" className="bg-white text-gray-600 px-1">ชื่อผู้จำหน่าย</label>
+          </p>
+        </div>
+        <p>
+          <input onChange={e => setHOSP_SHIP_TO_DESCsecond(e.target.value)} value={HOSP_SHIP_TO_DESCsecond} id="HOSP_SHIP_TO_DESCsecond" autoComplete="false" tabIndex="0" type="text" className="py-1 px-1 text-gray-900 outline-none block h-full w-full"/>
+        </p>
+      </div>
+      <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
+        <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+          <p>
+            <label htmlFor="name" className="bg-white text-gray-600 px-1">รหัสผู้จำหน่าย</label>
+          </p>
+        </div>
+        <p>
+          <input onChange={e => setSUPPLIER_CODEsecond(e.target.value)} value={SUPPLIER_CODEsecond} id="SUPPLIER_CODEsecond" autoComplete="false" tabIndex="0" type="text" className="py-1 px-1 text-gray-900 outline-none block h-full w-full"/>
+        </p>
+      </div>
+      <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
+        <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+          <p>
+            <label htmlFor="name" className="bg-white text-gray-600 px-1">% ส่วนลด</label>
+          </p>
+        </div>
+        <p>
+          <input onChange={e => setDISCOUNT_PCTsecond(e.target.value)} value={DISCOUNT_PCTsecond} id="DISCOUNT_PCTsecond" autoComplete="false" tabIndex="0" type="number"  maxLength='9'className="py-1 px-1 text-gray-900 outline-none block h-full w-full"/>
+        </p>
+      </div>
+  <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
+        <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+          <p>
+            <label htmlFor="name" className="bg-white text-gray-600 px-1">ส่วนลดจำนวนเงิน</label>
+          </p>
+        </div>
+        <p>
+          <input onChange={e => setDISCOUNT_AMTsecond(e.target.value)} value={DISCOUNT_AMTsecond} id="DISCOUNT_AMTsecond" id="name" autoComplete="false" tabIndex="0" type="number"  maxLength='9'className="py-1 px-1 text-gray-900 outline-none block h-full w-full"/>
+        </p>
+      </div>
+      <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
+        <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+          <p>
+            <label htmlFor="name" className="bg-white text-gray-600 px-1">มูลค่าไม่รวม VAT</label>
+          </p>
+        </div>
+        <p>
+          <input onChange={e => setAMOUNT_EXC_VATsecond(e.target.value)} value={AMOUNT_EXC_VATsecond}  id="AMOUNT_EXC_VATsecond" autoComplete="false" tabIndex="0" type="number"  maxLength='9'className="py-1 px-1 text-gray-900 outline-none block h-full w-full"/>
+        </p>
+      </div>
+  <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
+        <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+          <p>
+            <label htmlFor="name" className="bg-white text-gray-600 px-1">มูลค่า VAT</label>
+          </p>
+        </div>
+        <p>
+          <input  onChange={e => setVAT_AMOUNTsecond(e.target.value)} value={VAT_AMOUNTsecond} id="VAT_AMOUNTsecond" autoComplete="false" tabIndex="0" maxLength='9' type="number"   className="py-1 px-1 text-gray-900 outline-none block h-full w-full"/>
+        </p>
+      </div>
+  <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
+        <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+          <p>
+            <label htmlFor="name" className="bg-white text-gray-600 px-1">มูลค่ารวม VAT</label>
+          </p>
+        </div>
+        <p>
+          <input  onChange={e => setAMOUNT_INC_VATsecond(e.target.value)} value={AMOUNT_INC_VATsecond} id="AMOUNT_INC_VATsecond" autoComplete="false" tabIndex="0" type="number"  maxLength='9'className="py-1 px-1 text-gray-900 outline-none block h-full w-full"/>
+        </p>
+      </div>
+      </div>
+    {/* <div className="grid lg:grid-cols-4 gap-6  mt-3 pt-3">
       <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
         <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
           <p>
@@ -714,7 +817,7 @@ const test =()=>{
   <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
         <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
           <p>
-            <label htmlFor="name" className="bg-white text-gray-600 px-1">PO_NUMBER</label>
+            <label htmlFor="name" className="bg-white text-gray-600 px-1">เลขที่ใบสั่งซื้อ</label>
           </p>
         </div>
         <p>
@@ -745,9 +848,9 @@ const test =()=>{
   <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
         <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
           <p>
-            <label htmlFor="name" className="bg-white text-gray-600 px-1">PO_DATE</label>
+            <label htmlFor="name" className="bg-white text-gray-600 px-1">วันที่ออกใบสั่งซื้อ</label>
           </p>
-        </div>
+        </div>  
         <p>
         <DatePicker onChange={date => setPO_DATEsecond(date)}  selected={PO_DATEsecond} wrapperClassName="datePicker w-full" className='py-1 px-1 text-gray-900 outline-none block h-full w-full' dateFormat="dd-MM-yyyy"   />
    
@@ -955,7 +1058,7 @@ const test =()=>{
       </div>
       
     </div>
-   
+    */}
   </div>
           </div>
       
@@ -965,6 +1068,88 @@ const test =()=>{
     <h2 className='fonttop mb-5'>เซล 3</h2>
     </div>
     <div className="grid lg:grid-cols-4 gap-6  mt-3 pt-3">
+    <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
+        <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+          <p>
+            <label htmlFor="name" className="bg-white text-gray-600 px-1">DATA_LINE_TYPE</label>
+          </p>
+        </div>
+        <p>
+        <input disabled maxLength={2} onChange={e => setDATA_LINE_TYPEfirst(e.target.value)} value={DATA_LINE_TYPEfirst} id="name" autoComplete="false" tabIndex="0" type="text" className="disable py-1 px-1 text-black outline-none block h-full w-full"/>
+           </p>
+      </div>
+      <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
+        <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+          <p>
+            <label htmlFor="name" className="bg-white text-gray-600 px-1">ชื่อสินค้า</label>
+          </p>
+        </div>
+        <p>
+          <input id="ITEM_NAME" onChange={e => setITEM_NAME(e.target.value)}  id="name" autoComplete="false" tabIndex="0" type="text" className="py-1 px-1 text-gray-900 outline-none block h-full w-full"/>
+        </p>
+      </div>
+      <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
+        <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+          <p>
+            <label htmlFor="name" className="bg-white text-gray-600 px-1">ราคาต่อหน่วย</label>
+          </p>
+        </div>
+        <p>
+          <input id="PRICE_PER_UNIT" onChange={e => setPRICE_PER_UNIT(e.target.value)}  autoComplete="false" tabIndex="0" type="number"  maxLength='9'className="py-1 px-1 text-gray-900 outline-none block h-full w-full"/>
+        </p>
+      </div>
+      <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
+        <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+          <p>
+            <label htmlFor="name" className="bg-white text-gray-600 px-1">จำนวน</label>
+          </p>
+        </div>
+        <p>
+          <input id="QUANTITY" onChange={e => setQUANTITY(e.target.value)} autoComplete="false" tabIndex="0" type="number"  maxLength='9'className="py-1 px-1 text-gray-900 outline-none block h-full w-full"/>
+        </p>
+      </div>
+      <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
+        <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+          <p>
+            <label htmlFor="name" className="bg-white text-gray-600 px-1">ราคาต่อหน่วย no vat</label>
+          </p>
+        </div>
+        <p>
+          <input id="PRICE_PER_UNIT" onChange={e => setPRICE_PER_UNIT(e.target.value)}  autoComplete="false" tabIndex="0" type="number"  maxLength='9'className="py-1 px-1 text-gray-900 outline-none block h-full w-full"/>
+        </p>
+      </div>
+      <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
+        <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+          <p>
+            <label htmlFor="name" className="bg-white text-gray-600 px-1">ราคารวม no vat</label>
+          </p>
+        </div>
+        <p>
+          <input id="PRICE_EXC_VAT" onChange={e => setPRICE_EXC_VAT(e.target.value)} autoComplete="false" tabIndex="0" type="number"  maxLength='9'className="py-1 px-1 text-gray-900 outline-none block h-full w-full"/>
+        </p>
+      </div>
+      <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
+        <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+          <p>
+            <label htmlFor="name" className="bg-white text-gray-600 px-1">ภาษีมูลค่าเพิ่ม</label>
+          </p>
+        </div>
+        <p>
+          <input  id="VAT_AMOUNT" onChange={e => setVAT_AMOUNT(e.target.value)} autoComplete="false" tabIndex="0" type="number"  maxLength='9'className="py-1 px-1 text-gray-900 outline-none block h-full w-full"/>
+        </p>
+      </div>
+      <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
+        <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
+          <p>
+            <label htmlFor="name" className="bg-white text-gray-600 px-1">ราคารวม VAT</label>
+          </p>
+        </div>
+        <p>
+          <input  id="AMOUNT_INC_VAT" onChange={e => setAMOUNT_INC_VAT(e.target.value)}  autoComplete="false" tabIndex="0" type="number"  maxLength='9'className="py-1 px-1 text-gray-900 outline-none block h-full w-full"/>
+        </p>
+      </div>
+    </div>
+    {/* <div className="grid lg:grid-cols-4 gap-6  mt-3 pt-3">
     <div className="border border-gray-800 focus-within:border-blue-500 focus-within:text-blue-500 transition-all duration-500 relative rounded p-1">
         <div className="-mt-4 absolute tracking-wider px-1 uppercase text-xs">
           <p>
@@ -1159,7 +1344,7 @@ const test =()=>{
       </div>
 
     </div>
-    
+     */}
     </div></div>
 
 
